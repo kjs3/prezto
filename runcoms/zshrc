@@ -11,7 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Setup Node Version Manager
-export NVM_DIR="/Users/kjs3/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Add Rust to path
@@ -34,3 +34,4 @@ alias sshkjs3="ssh kjs3@45.76.29.101"
 
 # Godammit Spotlight! Keep those apps in your index!
 alias fuckyouspotlight="sudo mdutil -a -i off && sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo mdutil -a -i on"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
