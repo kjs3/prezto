@@ -30,8 +30,8 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
 # SSH aliases
-alias sshkjs3="ssh kjs3@45.76.29.101"
-alias sshds="ssh ubuntu@18.220.213.165" # doorsteps bot on Lightsail
+alias sshkjs3="ssh kjs3@$KJS3_IP"
+alias sshds="ssh ubuntu@$DOORSTEPS_BOT_IP" # doorsteps bot on Lightsail
 
 # Godammit Spotlight! Keep those apps in your index!
 alias fuckyouspotlight="sudo mdutil -a -i off && sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo mdutil -a -i on"
