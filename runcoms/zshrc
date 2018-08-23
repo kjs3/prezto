@@ -15,6 +15,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Add Yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 
+# Make VSCode trash work
+export ELECTRON_TRASH=gio
+
 # Golang setup
 export GOPATH=$HOME/code/go
 export GOROOT=/usr/local/opt/go/libexec
