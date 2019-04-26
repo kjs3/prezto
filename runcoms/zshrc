@@ -9,6 +9,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# set terminal for i3
+# export TERMINAL=kitty
+
 # Add Rust to path
 export PATH=$HOME/.cargo/bin:$PATH
 
@@ -20,16 +23,30 @@ export ELECTRON_TRASH=gio
 
 # Golang setup
 export GOPATH=$HOME/code/go
-export GOROOT=/usr/local/opt/go/libexec
+# export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
 # Add Python scripts to path
 export PATH=$PATH:$HOME/.local/bin
 
+# Set keyboard layout
+# to see options: "cat /usr/share/X11/xkb/rules/base.lst"
+# alias keylapg="setxkbmap -layout us -option && setxkbmap -layout us -option caps:ctrl_modifier,ctrl:swap_lalt_lctl_lwin"
+# alias keylapc="setxkbmap -layout us -option && setxkbmap -layout us -option caps:ctrl_modifier,altwin:swap_lalt_lwin"
+# alias keymacg="setxkbmap -layout us -option && setxkbmap -layout us -option caps:ctrl_modifier,ctrl:swap_lwin_lctl"
+# alias keymacc="setxkbmap -layout us -option && setxkbmap -layout us -option caps:ctrl_modifier"
+
 # SSH aliases
 alias sshkjs3="ssh kjs3@$KJS3_IP"
-alias sshds="ssh ubuntu@$DOORSTEPS_BOT_IP" # doorsteps bot on Lightsail
+alias sshds="ssh -i $DOORSTEPS_ID ubuntu@$DOORSTEPS_BOT_IP" # doorsteps bot
+
+# Tell Ranger file manager not to load default config (user config in ~/.config/ranger/)
+# export RANGER_LOAD_DEFAULT_RC=false
+
+# allow polkit to run GUI apps
+# https://askubuntu.com/questions/287845/how-to-configure-pkexec
+# alias pkexec='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 
 # Godammit Spotlight! Keep those apps in your index!
 alias fuckyouspotlight="sudo mdutil -a -i off && sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo mdutil -a -i on"

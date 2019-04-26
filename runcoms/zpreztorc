@@ -23,12 +23,14 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Set the Zsh functions to load (man zshcontrib).
 # zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+zstyle ':prezto:load' zfunction 'zmv'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
+  'ssh' \
   'editor' \
   'history' \
   'directory' \
