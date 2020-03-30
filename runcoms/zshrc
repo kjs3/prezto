@@ -50,3 +50,6 @@ alias sshds="ssh -i $DOORSTEPS_ID ubuntu@$DOORSTEPS_BOT_IP" # doorsteps bot
 
 # Godammit Spotlight! Keep those apps in your index!
 alias fuckyouspotlight="sudo mdutil -a -i off && sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo mdutil -a -i on"
+
+# setup Das keyboard
+alias daskey="sleep 0.3 && kmonad ~/.config/kmonad/das-mac.kbd > /dev/null 2>&1 &"
