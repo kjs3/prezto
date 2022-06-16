@@ -40,3 +40,6 @@ export PATH=$PATH:$GOROOT/bin
 
 # Add Python scripts to path
 export PATH=$PATH:$HOME/.local/bin
+
+# Prevent Next.js telemetry
+export NEXT_TELEMETRY_DISABLED=1 
