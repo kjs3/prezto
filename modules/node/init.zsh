@@ -23,7 +23,7 @@ if (( $#local_nodenv_paths || $+commands[nodenv] )); then
 
 # Load manually installed nvm into the shell session.
 elif (( $#local_nvm_paths )); then
-  source "$local_nvm_paths[1]" --no-use
+  source "$local_nvm_paths[1]" #--no-use
 
 # Load package manager installed nvm into the shell session.
 elif (( $+commands[brew] )) \
