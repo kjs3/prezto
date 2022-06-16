@@ -29,9 +29,6 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 # Add Rust path
 export PATH=$HOME/.cargo/bin:$PATH
 
-# Add Yarn path
-export PATH="$(yarn global bin):$PATH"
-
 # Make VSCode trash work
 export ELECTRON_TRASH=gio
 
