@@ -42,4 +42,7 @@ export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$HOME/.local/bin
 
 # Prevent Next.js telemetry
-export NEXT_TELEMETRY_DISABLED=1 
+export NEXT_TELEMETRY_DISABLED=1
+
+alias pulseup=~/.local/pulse_up
+alias pulsedown=~/.local/pulse_down
