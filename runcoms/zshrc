@@ -47,6 +47,7 @@ export NEXT_TELEMETRY_DISABLED=1
 #
 # Aliases
 #
+alias python=/usr/bin/python3
 
 #
 # Pulse Secure:
