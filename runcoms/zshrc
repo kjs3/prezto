@@ -23,9 +23,6 @@ fi
 # set terminal for i3
 # export TERMINAL=kitty
 
-# Make python3 the default
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
-
 # Add Rust path
 . "$HOME/.cargo/env"
 
@@ -38,26 +35,24 @@ export GOPATH=$HOME/code/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+# Add Homebrew Python symlinks
+export PATH=/opt/homebrew/opt/python@3.10/libexec/bin:$PATH
 # Add Python scripts to path
 export PATH=$PATH:$HOME/.local/bin
 
 # Prevent Next.js telemetry
 export NEXT_TELEMETRY_DISABLED=1
 
-#
-# Aliases
-#
-alias python=/usr/bin/python3
-
-#
 # Pulse Secure:
-#
 alias pulseup=~/.local/pulse_up
 alias pulsedown=~/.local/pulse_down
 
-#
 # pnpm
-#
+export PNPM_HOME="/Users/kjs3/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 alias p='pnpm'
 # pnpm: Dependencies
 alias pa='pnpm add'
@@ -89,3 +84,14 @@ alias pdx='pnpm dlx'
 alias pi='pnpm init'
 alias ppub='pnpm publish'
 alias pc='pnpm create'
+
+# JS dev
+alias turbo='pnpx turbo'
+alias prisma='pnpm prisma'
+
+# bun completions
+[ -s "/Users/kjs3/.bun/_bun" ] && source "/Users/kjs3/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
