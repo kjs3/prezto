@@ -42,7 +42,6 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'git' \
   'node' \
-  'ruby' \
   'history-substring-search' \
   'prompt'
 
